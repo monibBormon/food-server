@@ -1,16 +1,15 @@
-import express from "express";
 import cors from "cors";
-import { connect } from "mongoose";
-import { connectDB } from "./config/db.js";
-import foodRouter from "./routes/foodRoute.js";
-import userRouter from "./routes/userRoute.js";
 import "dotenv/config";
+import express from "express";
+import { connectDB } from "./config/db.js";
 import cartRouter from "./routes/cartRoute.js";
+import foodRouter from "./routes/foodRoute.js";
 import orderRouter from "./routes/orderRoute.js";
+import userRouter from "./routes/userRoute.js";
 
 // app config
 const app = express();
-const port = "https://tasty-dash-backend.vercel.app" || 4000;
+const port = "https://food-server-five-dusky.vercel.app/" || 4000;
 
 // middleware
 app.use(express.json());
